@@ -4,6 +4,7 @@ import {
   StyleSheet,
   SafeAreaView,
   Platform,
+  ScrollView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Transactions from "./components/Transactions";
@@ -17,7 +18,7 @@ export default function Home() {
         colors={["rgba(0,0,0,0.8)", "transparent"]}
         style={styles.background}
       />
-      <View>
+      <ScrollView>
         <BalanceCard />
         <View style={styles.actions}>
           <ActionButton
@@ -50,7 +51,7 @@ export default function Home() {
           <Text style={styles.text.label}>Recent Transactions</Text>
           <Transactions />
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
